@@ -1,0 +1,9 @@
+[Unit]
+Description=Autoshutdown
+
+[Service]
+ExecStart=/usr/bin/autoshutdown.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -46,3 +46,12 @@ The Retrostone 2 Pro can be purchased on http://8bcraft.com.
     sudo cat >>/etc/fstab
     /dev/mmcblk1p1      /home       ext4    defaults    0   0
     ```
+    
+    
+## Auto shutdown when battery goes low
+A small shell script which observes the battery state. If < 3% of capacity is left, it will beep 5 times and afterwards call `shutdown -h 3` so you have 3 minutes to save all game state before it is going to be shutdown. 
+```bash
+sudo cp src/autoshutdoown.service /etc/systemd/system/
+sudo cp src/autoshutdown.sh /usr/bin/
+sudo systemctl enable autoshutdown.service
+```
