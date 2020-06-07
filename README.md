@@ -57,3 +57,9 @@ sudo chmod 755 /usr/bin/autoshutdown.sh
 sudo systemctl enable autoshutdown.service
 sudo systemctl start autoshutdown.service
 ```
+
+## WiFi in the Retropie Menu
+Adding the Enable WiFi switch dirctly into the Retropie Menu as it is annoying always having to open a submenu to do so.
+```bash
+ln -s ~/RetroPie/retropiemenu/RetrOrangePi/Wifi/Enable.sh ~/RetroPie/retropiemenu/Enable\ Wifi.sh
+```
