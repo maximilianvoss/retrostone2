@@ -15,7 +15,6 @@ while true; do
     if [ $(cat /sys/class/power_supply/axp20x-battery/capacity) -le 3 ]; then
         beep;
         sudo shutdown -h 3
-        sudo shutdown -h 3
     fi
     sleep 60
 done
