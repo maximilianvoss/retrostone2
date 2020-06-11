@@ -63,3 +63,10 @@ Adding the Enable WiFi switch dirctly into the Retropie Menu as it is annoying a
 ```bash
 ln -s ~/RetroPie/retropiemenu/RetrOrangePi/Wifi/Enable.sh ~/RetroPie/retropiemenu/Enable\ Wifi.sh
 ```
+
+## Resetting the Gamepad after it got stuck with holding a key
+```bash
+cp src/Reset_Gamepad.sh ~/RetroPie/retropiemenu/Reset_Gamepad.sh
+chmod 755 ~/RetroPie/retropiemenu/Reset_Gamepad.sh
+```
+
