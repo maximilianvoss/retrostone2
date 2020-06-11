@@ -66,7 +66,7 @@ ln -s ~/RetroPie/retropiemenu/RetrOrangePi/Wifi/Enable.sh ~/RetroPie/retropiemen
 
 ## Resetting the Gamepad after it got stuck with holding a key
 ```bash
-cp src/Reset_Gamepad.sh ~/RetroPie/retropiemenu/Reset_Gamepad.sh
-chmod 755 ~/RetroPie/retropiemenu/Reset_Gamepad.sh
+cp src/Reset\ Gamepad.sh ~/RetroPie/retropiemenu/Reset \Gamepad.sh
+chmod 755 ~/RetroPie/retropiemenu/Reset\ Gamepad.sh
 ```
 
