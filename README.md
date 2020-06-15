@@ -64,9 +64,13 @@ Adding the Enable WiFi switch dirctly into the Retropie Menu as it is annoying a
 ln -s ~/RetroPie/retropiemenu/RetrOrangePi/Wifi/Enable.sh ~/RetroPie/retropiemenu/Enable\ Wifi.sh
 ```
 
-## Resetting the Gamepad after it got stuck with holding a key
+## Fix of controller issues
+After a long period of intense playing on a device without mounted joystick it happened that the character moves non-stop to the left. Only a restart of the device could fix it, but only for a very limited timeframe.
+I updated the GPIO controller and disabled the joystick code. To install and use the updated code:
 ```bash
-cp src/Reset\ Gamepad.sh ~/RetroPie/retropiemenu/Reset\ Gamepad.sh
-chmod 755 ~/RetroPie/retropiemenu/Reset\ Gamepad.sh
+cp src/tz_gpio_controller.py /home/pi/RetrOrangePi/GPIO/drivers/tz_gpio_controller.py
+ps aux | grep tz_gpio | grep sudo | awk '{ printf("sudo kill -9 %s\n", $2); }' | /bin/bash
+sudo python /home/pi/RetrOrangePi/GPIO/drivers/tz_gpio_controller.py &
 ```
+No additional action required after restart of the Retrostone.
 
